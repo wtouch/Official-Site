@@ -1,0 +1,38 @@
+*{
+ padding:0px;
+  margin:0px;
+  }
+  
+ 
+body
+ {
+    background: url(../img/Web-Touch-India-Solutions-Pune-BG-1.jpg);
+}
+
+.navbar
+{
+ margin-bottom:0px;}
+header
+{
+margin-top: 65px;}
+
+#logo
+ { 
+  margin-top: 27px;
+ }
+
+   
+ #logo h3
+{
+ color:#fff;} 
+ 
+ul li
+{
+  padding:0px 10px;}
+
+footer{height:50px;}
+footer a
+{   
+    line-height:50px;
+ 
+ }
