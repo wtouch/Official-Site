@@ -2,37 +2,94 @@
  padding:0px;
   margin:0px;
   }
-  
  
 body
  {
     background: url(../img/Web-Touch-India-Solutions-Pune-BG-1.jpg);
 }
 
-.navbar
+nav ul li
+ {
+  padding:0px 14px;}
+/*  */  
+.nav > li {
+position: relative;
+line-height: normal;
+display: inline-block;
+}  
+.nav > li > a {
+display: block;
+}
+
+a {
+color: #0088cc;
+}
+
+/*.nav-pills > li > a {
+margin: 2px 4px 2px 0px;
+position: relative;
+}*/
+
+.nav-pills > .active > a, .nav-pills > .active > a:hover, .nav-pills > li > a:hover 
 {
- margin-bottom:0px;}
+border-bottom: 3px solid #0088cc;
+padding: 0 10px 40px;
+}
+
+.nav-pills > .active > a:after, .nav-pills > .active > a:hover:after, .nav-pills > li > a:hover:after 
+{
+content: "";
+display: block;
+width: 28px;
+height: 25px;
+position: absolute;
+background: url(../img/right-icon.png);
+bottom: 10px;
+left: 0px;
+right: 0px;
+margin: 0 auto;
+}
+
+
 header
 {
-margin-top: 65px;}
+ margin-top: 65px;
+}
 
-#logo
+#logo img
  { 
-  margin-top: 27px;
+  padding-top: 30px;
  }
 
    
- #logo h3
+ #logo h1
 {
- color:#fff;} 
+ color:#fff;
+ font-size: 40px;
+font-weight: bold;
+ } 
+ 
+ address
+ {
+ margin-bottom:0px;
+ padding-top: 70px;
+ font-size:20px;
+ }
  
 ul li
 {
-  padding:0px 10px;}
+  padding:0px 10px;
+  }
 
-footer{height:50px;}
-footer a
-{   
-    line-height:50px;
- 
- }
+  footer
+  {
+   height:70px;
+   font-size:20px;
+   }
+   
+footer p
+{
+margin-bottom: 0px;
+padding: 5px;
+}
+
