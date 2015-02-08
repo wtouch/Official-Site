@@ -10,46 +10,68 @@ body
 
 nav ul li
  {
-  padding:0px 14px;}
-/*  */  
-.nav > li {
+  padding:0px 14px;
+  }
+ 
+.navigation .nav > li {
 position: relative;
 line-height: normal;
 display: inline-block;
-}  
+}
+
 .nav > li > a {
 display: block;
 }
 
-a {
+.nav-pills > li > a 
+{
+position:relative;
+padding: 20px 10px;
+}
+ul
+{
+margin-left: 19px;
+}
+.navbar
+{
+margin-bottom:0px;
+}
+a
+ {
 color: #0088cc;
 }
 
-/*.nav-pills > li > a {
-margin: 2px 4px 2px 0px;
-position: relative;
-}*/
+.nav-tabs > li > a, .nav-pills > li > a
+{
+line-height:33px;
+
+}
+
 
 .nav-pills > .active > a, .nav-pills > .active > a:hover, .nav-pills > li > a:hover 
 {
 border-bottom: 3px solid #0088cc;
-padding: 0 10px 40px;
+padding: 0 10px 35px;
 }
 
 .nav-pills > .active > a:after, .nav-pills > .active > a:hover:after, .nav-pills > li > a:hover:after 
 {
 content: "";
-display: block;
+display:inline-block;
 width: 28px;
 height: 25px;
 position: absolute;
 background: url(../img/right-icon.png);
+background-size: 100% 100%;
 bottom: 10px;
 left: 0px;
 right: 0px;
 margin: 0 auto;
 }
-
+.nav>li>a:hover, .nav>li>a:focus
+{
+background:none;
+}
 
 header
 {
