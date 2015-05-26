@@ -1,0 +1,182 @@
+	body {
+		background-color: #0B4E7C;
+		position : relative;
+	}
+	.logo{
+		width: 29%;
+		position: absolute;
+		left: 0px;
+		right: 0px;
+		margin: auto;
+		top: 150px;
+	}
+	.navbar-default{
+		margin-top : 250px;
+		background: none;
+		border :none;
+		.navbar-nav{
+			li{
+				a{
+					color : #fff;
+					font-size: 17px;
+					font-weight: bold;
+				}
+				a:hover,a:focus{
+					color : #C6EB21;
+				}
+			}
+		}
+	}
+	.service{
+		display: inline-block;
+		overflow: hidden;
+		position: relative;
+		border-radius: 5px;
+		padding: 15px;
+		text-align: center;
+		height: 186px;
+		transition: all 300ms linear;
+		h3{
+			color : #fff;
+			height : 80px;
+			font-weight :bold;
+		}
+		h3:hover{
+			-webkit-animation: smallToBig 300ms ease;
+		}
+		  
+	}
+	.service:hover{
+		z-index: 200;
+		transform: scale(1.29);
+		border : 5px solid #fff;  
+	}	
+	.service:hover p{
+		display : none;
+	}
+	@media (max-width: 384px){ 
+		.service{
+			width :100%; 
+		}
+	}
+	@media (min-width: 385px)and(max-width: 768px){ 
+		.service{
+			width :190px; 
+		}
+	}
+	@media (min-width: 768px){ 
+		.service{
+			width :186px; 
+		}
+	}
+	.service1{
+		background-color : #00B586;
+	}
+	.service2{
+		background-color : #D4F834;
+	}
+	.service3{
+		background-color : #F3B224;
+	}
+	.service4{
+		background-color : #B80071;
+	}
+	.service5{
+		background-color :#FF5541;
+	}
+	.content{
+		background-color : #E9E9E9;
+		border :20px solid #D1D1D1;
+		box-shadow:  5px 1px 7px #E9E9E9;
+		border-radius : 5px;
+		margin-top : 10px;
+		.info{
+			height : 350px;
+			overflow : auto;
+			padding : 20px;
+			h4{
+				color : #15AFDB;
+			}
+		}
+		.port{
+			background-color : #fff;
+			border:1px solid #000;
+			border-radius : 3px;
+			height : 310px;
+			img{
+				height: 310px;
+				width: 100%;
+				padding: 5px;
+			}
+		}
+		.portfolio{
+			background-color : #fff;
+			border:1px solid #000;
+			border-radius : 3px;
+			height : 100px;
+			width :49%;
+			display : inline-block;
+			margin-bottom : 4px;
+			img{
+				height: 100px;
+				width: 100%;
+				padding: 5px;
+			}
+		}
+		.btn-info {
+			color: #fff;
+			background-color: #323232;
+			border: none;
+			margin-top: 18px;
+			border-radius: 15px;
+			padding: 5px 25px;
+		}
+	}
+	.services{
+		float : left;
+		margin-right : 60px;
+		background-color : #fff;
+		border:1px solid #000;
+		border-radius : 3px;
+		height : 150px;
+		width :40%;
+		display : inline-block;
+		margin-bottom : 4px;
+		img{
+			height: 148px;
+			width: 100%;
+			padding: 5px;
+		}
+	}
+	#googleMap{
+		height:300px;
+	}
+	.thumbnail .caption,h3{
+		color : #fff;
+	}
+	.thumbnail.bronz {
+		background-color: #CD7F32;
+		border : 10px solid #C26E1B;
+	}
+	.thumbnail.silver {
+		background-color: #BCC6D5;
+		border : 10px solid #B4BFCF;
+	}
+	.thumbnail.gold {
+		background-color: #ffd700;
+		border : 10px solid #F4CF09;
+	}
+	.thumbnail.diamond {
+		background-color: #D03255;
+		border : 10px solid #C31F43;
+	}
+	footer{
+		border : 7px solid #1E305A;
+		margin : 25px 0px;
+		box-shadow:  5px 1px 7px  #0A2140;
+		background-color : #051021;
+		border-radius : 5px;
+		text-align : center;
+		padding : 8px;
+		color : #fff;
+	}

@@ -1,0 +1,436 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/mystyles.css">
+		<script src="js/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/angular.min.js"></script>
+		<script src="js/angular-route.min.js"></script>
+		<script src="js/script.js"></script>
+		<title>WebTouch</title>
+		<meta name="description" content="">
+		<meta name="keywords" content="">
+		<script src="http://maps.googleapis.com/maps/api/js"></script>
+		<script type="text/javascript">
+			/*$(document).ready(function() {
+			  $('.imgs').click(function(){
+				var idimg = $(this).attr('id');
+				var srcimg = $(this).attr('src');
+			  });
+			}); */
+			function initialize() {
+				var mapProp = {
+					center:new google.maps.LatLng(18.625955, 73.756366),
+					zoom:18,
+					disableDefaultUI:true,
+					mapTypeId:google.maps.MapTypeId.ROADMAP
+				};
+				var map=new google.maps.Map(document.getElementById("googleMap"), mapProp);
+			}
+			google.maps.event.addDomListener(window, 'load', initialize);
+		</script>
+	</head>
+	<body>
+		<div class="container">
+			<div class="logo">
+				<a href="#"><img src="img/getImage.png"></a>
+			</div>
+			<nav class="navbar navbar-default">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+				</div>
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav">
+						<!--<li><a href="index.html">Home</a></li>
+						 astrologyandspirituality.html -->
+						<!-- <li><a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" aria-controls="collapseExample">ABOUT US</a></li> -->
+						<li><a href="#">ABOUT US</a></li>
+						<li><a href="#">PORTFOLIO</a></li>
+						<li><a href="#">SERVICES</a></li>
+						<li><a href="#">CUSTOMER LOGIN</a></li>
+						<li><a href="#">BULK SMS</a></li>
+						<li><a href="#">EMAIL LOGIN</a></li>
+						<li><a href="#">APNASITE.IN</a></li>
+						<li><a href="#">CONTACT US</a></li>
+					</ul>
+				</div>
+			</nav>
+			<div>
+				<div class="service service1">
+					<h3>WEB</h3>
+					<p>WEB DEVELOPMENT</P>
+					<p class="desc">We provide </p>
+				</div>
+				<div class="service service2">
+					<h3>SOFTWARE</h3>
+					<p>SOFTWARE DEVELOPMENT</p>
+				</div>
+				<div class="service service3">
+					<h3>MOBILE</h3>
+					<p>ANDROID & MOBILE DEVELOPMENT</p>
+				</div>
+				<div class="service service4">
+					<h3>TRAINING</h3>
+					<p>TRAINING<br></p>
+				</div>
+				<div class="service service5">
+					<h3>HARDWARE</h3>
+					<p>HARDWARE NETWORKING</p>
+				</div>
+				<div class="service service1">
+					<h3>MARKETING</h3>
+					<p>PRODUCT <br>MARKETING</p>
+				</div>
+			</div>
+			<div class="content" id="collapseExample">
+				<h2 class="text-center">ABOUT US</h2>
+				<div class="info">
+					<h4>Our Vision</h4>
+					<p>Work Till Client’s Satisfaction.</p>
+					<h4>About Us</h4>
+					<p>Web Touch India Solutions founded in 2012, has more than 4+ years of experience in the Web Development and IT Services. Web Touch have highly skilled employee. Web Touch is a speedily growing company in Pune City.</p> 
+					<p>We fulfilling the requirements of the customers in the areas of web site designing and development, Web Application Development (ASP.NET, PHP), Mobile Application Development (Android, iOS, Windows).</p>
+					<p>We also provide service for Print Media. We offer Brochures desing, Logo design, Press Advertisements, CD Rom / Corporate Multimedia Presentations, etc., Custom made designs to suit your unique business needs and requirements.</p>
+					<p>Alternatively if you are looking for something a little more specific; outline your ideas for us and our designers and developers can create a bespoke professional brochure, website as per your requirements.</p>
+					<p>Also Web Touch is developing Educational Online Portal for Students from primary to higher education. It helps students for self-study, self-improvement & self-development.</p>
+					<h4>Our Team</h4>
+					<p>We believe that people really are at the heart of our success.  The final component that brings it all together is our team.  We hire the very best and the brightest; innovators, problem solvers, communicators.  Our team takes service delivery personally. We will go the extra mile to give our customers throughout the world all the support they require to realize all their online goals and visions.</p>
+					<h4>What We Did?</h4>
+					<ul>
+						<li>Developed more than 50 web projects.</li>
+						<li>Sold more than 10+ software to our clients.</li>
+						<li>Provide a very good service to our clients.</li>
+						<li>We earn satisfied clients more than money.</li>
+					</ul>
+				</div>
+			</div>
+			<div class="content">
+				<h2 class="text-center">SERVICES</h2>
+				<div class="info">
+					<div class="row">
+						<div class="col-sm-12 col-md-6">
+							<div class="services">
+								<img src="img/webdevlop.jpg">
+							</div>
+							<h4>Web Development</h4>
+							<ul>
+								<li>Web Application Development</li>
+								<li>Website Designing</li>
+								<li>Domain Name</li>
+								<li>Web Hosting</li>
+								<li>SEO Search Engine Optimization</li>
+								<li>Online Marketing Solutions</li>
+							</ul>
+						</div>
+						<div class="col-sm-12 col-md-6">
+							<div class="services">
+								<img src="img/software.jpg">
+							</div>
+							<h4>Software Development</h4>
+							<ul>
+								<li>Software Development</li>
+								<li>Customized Product Development</li>
+								<li>Software Support</li>
+								<li>Software Testing</li>
+								<li>Software Marketing</li>
+							</ul>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-12 col-md-6">
+							<div class="services">
+								<img src="img/mobile.jpg">
+							</div>
+							<h4>Android and Mobile Development</h4>
+							<ul>
+								<li>Android Development</li>
+								<li>Java Mobile Development</li>
+								<li>Win8 Mobile Development</li>
+								<li>Mobile Application Development</li>
+							</ul>
+						</div>
+						<div class="col-sm-12 col-md-6">
+							<div class="services">
+								<img src="img/Training.jpg">
+							</div>
+							<h4>Training</h4>
+							<ul>
+								<li>Programming Languages Training</li>
+								<li>Software Training</li>
+								<li>Web Development Training</li>
+								<li>Corporate Training</li>
+								<li>Career Guidance</li>
+								<li>Mobile Development Training</li>
+								<li>Graphic Designing Training</li>
+								<li>Hardware Networking Training</li>
+								<li>Diploma & Certificate Training</li>
+							</ul>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-12 col-md-6">
+							<div class="services">
+								<img src="img/mobile.jpg">
+							</div>
+							<h4>Hardware Networking</h4>
+							<ul>
+								<li>Annual Maintenance – Home & Business</li>
+								<li>Computer Hardware Sell</li>
+								<li>Networking Support</li>
+								<li>Hardware Installation</li>
+								<li>Software Installation</li>
+								<li>Online Support</li>
+							</ul>
+						</div>
+						<div class="col-sm-12 col-md-6">
+							<div class="services">
+								<img src="img/Training.jpg">
+							</div>
+							<h4>Product Marketing</h4>
+							<ul>
+								<li>Hardware & Software Product Marketing</li>
+								<li>Web Product Selling – Online/Offline</li>
+								<li>Online Business Marketing Support</li>
+								<li>Social Network Marketing</li>
+								<li>Business Development Consulting</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="content">
+				<h2 class="text-center">PORTFOLIO</h2>
+				<div class="info">
+					<div class="row">
+						<div class="col-sm-8 col-md-8"> 
+							<div id="img" class="port">
+								<img src="img/atharwa-gems.jpg">
+							</div>
+						</div>
+						<div class="col-sm-4 col-md-4">
+							<div class="portfolio"><img alt="" class="imgs" id="the_id"src="img/atharwa-gems.jpg"></div>
+							<div class="portfolio"><img alt="" class="imgs" id="the_id1"src="img/gita-ka-bhagwan.jpg"></div>
+							<div class="portfolio"><img alt="" class="imgs" id="the_id2"src="img/jaidev-landmarks.jpg"></div>
+							<div class="portfolio"><img alt="" class="imgs" id="the_id3"src="img/property-demand.jpg"></div>
+							<div><button class="btn btn-info">Prev</button>
+							<button class="btn btn-info pull-right">Next</button></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="content">
+				<h2 class="text-center">APNASITE.IN</h2>
+				<div class="info">
+					<h4>What is ApnaSite.in?</h4>
+					<p>ApnaSite.in is online business search engine and website creator tool. Which allows you to promote your business or organization over internet through ApnaSite.in. ApnaSite allows you to create business/organization's website in 4 easy steps. After creation of website & submission of your business/organization to ApnaSite portal, ApnaSite will promote your website as well as your business, products, services on popular search engines like Google, Bing and Yahoo. ApnaSite gives opportunity to manage your website, business/organization information, product information or services information of your own with very simple admin panel.</p> 
+					<h4>Why ApnaSite?</h4>
+					<ol list-style-type="1">
+						<li><p><b>Business Promotion :</b> 
+							We promote your business on ApnaSite.in as well as popular search engines like Google, Yahoo, Bing etc.
+						</li>
+						<li><p><b>Dynamic Website :</b>
+							You can manage your website at your end with various free and professional templates having customization facility. You can modify your website content at any time. And modifications will activate immediately.
+						</li>
+						<li><p><b>Enquiry Generation :</b>  
+							ApnaSite will allow you to generate enquiry from portal and website. ApnaSite will never charge for any enquiry.
+						</li>
+						<li><p><b>Direct Communication :</b>
+							Customer/End User or buyer can direct communicate to Seller. ApnaSite will never charge for any enquiry. No hidden charges.
+						</li>
+						<li><p><b>Website Promotion :</b>
+							ApnaSite will promote your website on Google, Yahoo and Bing search engine.
+						</li>
+						<li><p><b>Grow Business :</b>
+							We will help you through newsletters to grow your business speedily. 
+						</li>
+					</ol>
+					<h4>Features</h4>
+					<ol list-style-type="1">
+						<li><p><b>Manage Website :</b> 
+							Add, edit or delete any information from your website.
+						</li>
+						<li><p><b>Website Template :</b>
+							Get new template, customize template.
+						</li>
+						<li><p><b>Business Details :</b>  
+							Add, edit or delete business details like facilities, infrastructures etc.
+						</li>
+						<li><p><b>Testimonials :</b>
+							Add your customer feedback & publish it on website.
+						</li>
+						<li><p><b>Manage Products :</b>
+							Add, edit or delete products.
+						</li>
+						<li><p><b>Manage Services :</b>
+							Add, edit or delete services.
+						</li>
+						<li><p><b>Job and Careers :</b>
+							You can post current openings and publish on website easily.
+						</li>
+						<li><p><b>Activities/News Coverage :</b>
+							You can publish your news coverage articles or any other activities like anniversary.
+						</li>
+						<li><p><b>Gallery :</b>
+							Add business images, function photos into gallery.
+						</li>
+						<li><p><b>ApnaSite Search Engine :</b>
+							End user can search business, services and products on ApnaSite.in with powerful Search Engine.
+						</li>
+						<li><p><b>Google Map :</b>
+							With the help of google map user can easily fine your business location.
+						</li>
+						<li><p><b>Enquiry Management :</b>
+							You will notify by SMS and Email when customer send enquiry from website or ApnaSite portal.
+						</li>
+						<li><p><b>10 Year Validity :</b>
+							First time in the History of IT industry, ApnaSite will give you opportunity to pay once for 10 Years. Your business validity on ApnaSite is 10years with no hidden charges. Only charges will apply for your website maintenance.
+						</li>
+					</ol>
+					<h4>Packages</h4>
+					<div class="row">
+						<div class="col-sm-6 col-md-3">
+							<div class="thumbnail bronz">
+								<h3 class="text-center">Bronz Package</h3>
+								<div class="caption">
+									<p><b>Validity – 2 Year</b></p>
+									<p><b>INR 4000/-</b></p>
+									<ul>
+										<li>Subdomain</li> <li>Hosting</li> <li>Free Business listing on ApnaSite.in</li> <li>10 Products</li> <li>10 Services</li> <li>Galley</li> <li>Testimonials</li> <li>News Coverage</li> <li>Google Map</li> <li>SMS alert – 700</li> <li>Email Notification</li> <li>SEO for Google, Bing, Yahoo</li> <li>Subdomain Validity – 2 Year</li> <li>Business Listing Validity – 10 Year</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-6 col-md-3">
+							<div class="thumbnail silver">
+								<h3 class="text-center">Silver Package</h3>
+								<div class="caption">
+									<p><b>Validity – 1 Year</b></p>
+									<p><b>INR 6000/-</b></p>
+									<ul>
+										<li>.com, .co.in or .in </li> <li>Hosting</li> <li>2 corporate email IDs with 2GB space each</li> <li>Free Business listing on ApnaSite.in</li><li>Unlimited  Products</li> <li>Unlimited  Services</li> <li>Galley</li> <li>Testimonials</li> <li>Job Management</li> <li>News Coverage</li> <li>Google Map</li> <li>SMS alert – 1000</li> <li>Email Notification</li> <li>SEO for Google, Bing, Yahoo</li> <li>Social Media Integration (Facebook, Google+)</li> <li>Domain Validity – 1 Year</li> <li>Business Listing Validity – 10 Year</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-6 col-md-3">
+							<div class="thumbnail gold">
+								<h3 class="text-center">Gold Package</h3>
+								<div class="caption">
+									<p><b>Validity – 3 Year</b></p>
+									<p><b>INR 12600/- </b>(30% discount)</p>
+									<ul>
+										<li>Subdomain</li> <li>Hosting</li> <li>5 corporate email IDs with 2GB space each</li> <li>Free Business listing on ApnaSite.in</li> <li>Unlimited  Products</li> <li>Unlimited  Services</li> <li>Galley</li> <li>Testimonials</li> <li>Job Management</li> <li>News Coverage</li> <li>Google Map</li> <li>Google Place</li> <li>SMS alert – 3000</li> <li>Email Notification</li> <li>SEO for Google, Bing, Yahoo</li> <li>Social Media Integration (Facebook, Google+, Twitter)</li> <li>Domain Validity – 3 Year</li> <li>Business Listing Validity – 10 Year</li> <li>Business Listing as a Featured Business</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-6 col-md-3">
+							<div class="thumbnail diamond">
+								<h3 class="text-center">Diamond Package</h3>
+								<div class="caption">	
+									<p><b>Validity – 5 Year</b></p>
+									<p><b>INR 19500/- </b>(35% discount)</p>
+									<ul>
+										<li>Subdomain</li> <li>Hosting</li> <li>10 corporate email IDs with 2GB space each</li> <li>Free Business listing on ApnaSite.in</li> <li>Unlimited  Products</li> <li>Unlimited  Services</li> <li>Galley</li> <li>Testimonials</li> <li>Job Management</li> <li>News Coverage</li> <li>Google Map</li> <li>Google Place</li> <li>SMS alert – 5000</li> <li>Email Notification</li> <li>SEO for Google, Bing, Yahoo</li> <li>Social Media Integration (Facebook, Google+, Twitter)</li> <li>Domain Validity – 5 Year</li> <li>Business Listing Validity – 10 Year</li> <li>Business Listing as a Featured Business</li> <li>One Custom Template Available</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="content">
+				<h2 class="text-center">CONTACT US</h2>
+				<div class="info">
+					<div class="row">
+						<div class="col-sm-12 col-md-4">
+							<h3>ADDRESS</h3>
+							<address>
+								Shop No 2, Sr No 36/2/1,<br>
+								Opp. Balaji Law College<br>
+								Aundh-Ravet Road,<br>
+								Tathawade, Pimpari-Chinchwad,<br>
+								Pune, Maharashtra 411 003.
+							</address>
+							<p>Phone : +91 (20) 6510 0209
+							<p>Mobile : 9049508514
+							<p>Email-ID : support@wtouch.in
+						</div>
+						<div class="col-sm-12 col-md-4">
+							<form class="form-horizontal form-border" role="form" name="enquiryForm" ng-submit="enquiryForm.$valid" novalidate>
+								<div class="form-group">
+									<div class="col-sm-12">
+										<input type="hidden" class="form-control" id="user_id" ng-init="enquiry.user_id={{data.user_id}}" ng-model="enquiry.user_id" name="user_id">
+										
+										<input type="hidden" class="form-control" id="date" ng-model="enquiry.date" name="date">
+										
+										<input type="hidden" class="form-control" id="to_email.to" name="to_email.to" ng-model="enquiry.to_email.to" ng-init="enquiry.to_email.to='{{data.owner_email}}'">
+										
+										<input type="hidden" class="form-control" id="to_email.cc" name="to_email.cc" ng-model="enquiry.to_email.cc" ng-init="enquiry.to_email.cc='vilas@wtouch.in'">
+								
+										<input type="hidden" class="form-control" id="subject" name="subject" ng-model="enquiry.subject">
+										
+										<input type="text" class="form-control" id="name" ng-model="enquiry.name" name="name" placeholder="Name" ng-required="true">	
+											<span class="text-danger" ng-show="enquiryForm.name.$error.required && (enquiryForm.name.$dirty || submitted)" class="help-block">Name is required.</span>
+									</div>	
+								</div>
+								<div class="form-group">
+									<div class="col-sm-12">
+										<input type="email" class="form-control" id="from" name="from" placeholder="E-mail" ng-model="enquiry.from_email.from" required>
+										<span  ng-show="enquiryForm.from.$dirty && enquiryForm.from.$invalid">
+											<span class="text-danger" ng-show="enquiryForm.from.$error.required">From is required.</span>
+											<span class="text-danger" ng-show="enquiryForm.from.$error.email">Invalid Email address.</span>
+										</span>
+									</div>
+								</div>
+								<div class="form-group">
+									<div class="col-sm-12">
+										<input type="text" class="form-control help-block" id="phone" ng-model="enquiry.message.phone" name="phone" placeholder="Contact Number"  ng-pattern="/^[789]\d{9}$/" maxlength="10" required>
+										<p ng-show="enquiryForm.phone.$error.pattern && (enquiryForm.phone.$dirty || submitted)" class="text-danger" >Enter a valid contact no.</p>
+									</div>						
+								</div>	
+								<div class="form-group">
+									<div class="col-sm-12">
+										<textarea id="address" name="address" class="form-control" placeholder="Address" rows="3" ng-model="enquiry.message.address" ng-minlength="2" ng-maxlength="356" required>
+										</textarea>
+									</div>
+								</div>
+								<div class="form-group">
+									<div class="col-sm-12">
+										<textarea id="message" name="message" class="form-control" placeholder="Message" rows="3" ng-model="enquiry.message.message" ng-minlength="2" ng-maxlength="356" required>
+										</textarea>
+									</div>
+								</div>
+								<div class="form-group col-sm-12">
+									<button type="submit" class="btn btn-link" ng-click="postData(enquiry)" ng-disabled="enquiryForm.$pristine || enquiryForm.$invalid || mailSent">Send</button>
+									<button type="reset" class="btn btn-link" title="Cancel Sending">Clear</button>
+								</div>
+							</form>
+							<div ng-show="mailSent" class="text-center">
+								Your enquiry sent successfully.
+							</div>
+						</div>
+						<div class="col-sm-12 col-md-4">
+							<div id="googleMap"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<footer>
+				<p>copyright&copy;2012 <a href="/">Web Touch India Solutions</a></p>
+			</footer>
+		</div>
+	</body>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+</html>
