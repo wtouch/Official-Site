@@ -1,32 +1,6 @@
 body {
   background-color: #4E0660;
 }
-@-moz-keyframes dropHeader {
-  0% {
-    -moz-transform: translateY(-200px);
-    opacity: 0;
-  }
-  20% {
-    -moz-transform: translateY(-80px);
-    opacity: 0;
-  }
-  40% {
-    -moz-transform: translateY(-50px);
-    opacity: 0;
-  }
-  60% {
-    -moz-transform: translateY(-30px);
-    opacity: 0;
-  }
-  80% {
-    -moz-transform: translateY(-10px);
-    opacity: 0;
-  }
-  100% {
-    -moz-transform: translateY(0);
-    opacity: 1;
-  }
-}
 @-webkit-keyframes dropHeader {
   0% {
     -webkit-transform: translateY(-200px);
@@ -84,23 +58,97 @@ body {
 }
 .logo {
   margin-top: 60px;
-  -moz-animation-name: dropHeader;
-  -moz-animation-iteration-count: 1;
-  -moz-animation-timing-function: ease-in;
-  -moz-animation-duration: 1s;
-  -webkit-animation-name: dropHeader;
+}
+@media (min-width: 320px) {
+  .logo .homelogo {
+    width: 75%;
+  }
+}
+@media (min-width: 992px) {
+  .logo .homelogo {
+    width: 50%;
+  }
+}
+@media (min-width: 1200px) {
+  .logo .homelogo {
+    width: 400px;
+  }
+}
+.navbar-toggle .icon-bar {
+  background-color: #888;
+}
+.logo,
+.login {
+  -webkit-animation: dropHeader 1500ms ease-in-out;
   -webkit-animation-iteration-count: 1;
-  -webkit-animation-timing-function: ease-in;
-  -webkit-animation-duration: 1s;
-  animation-name: dropHeader;
+  animation: dropHeader 1500ms ease-in-out;
   animation-iteration-count: 1;
-  animation-timing-function: ease-in;
-  animation-duration: 1s;
+}
+.login {
+  margin-top: 20px;
+}
+.login a {
+  color: #fff;
+  font-size: 17px;
+  font-weight: bold;
+  padding-left: 10px;
+}
+.login a:hover {
+  text-decoration: none;
+  color: #C6EB21;
+  -webkit-animation: move-y 500ms;
+  animation: move-y 500ms;
 }
 @-webkit-keyframes move-y {
   /*0% {
 			transform:translateY(-100%);
-			opacity: 0;
+		}
+		5% {
+			transform:translateY(-100%);
+		}
+		15% {
+			transform:translateY(0);
+			padding-bottom: 5px;
+		}
+		30% {
+			transform:translateY(-50%);
+		}
+		40% {
+			transform:translateY(0%);
+			padding-bottom: 6px;
+		}
+		50% {
+			transform:translateY(-40%);
+		}
+		70% {
+			transform:translateY(0%);
+			padding-bottom: 7px;
+		}*/
+  80% {
+    transform: translateY(-30%);
+  }
+  90% {
+    transform: translateY(0%);
+    padding-bottom: 8px;
+  }
+  95% {
+    transform: translateY(-20%);
+  }
+  97% {
+    transform: translateY(0%);
+    padding-bottom: 9px;
+  }
+  99% {
+    transform: translateY(-10%);
+  }
+  100% {
+    transform: translateY(0);
+    padding-bottom: 9px;
+  }
+}
+@keyframes move-y {
+  /*0% {
+			transform:translateY(-100%);
 		}
 		5% {
 			transform:translateY(-100%);
@@ -149,6 +197,7 @@ body {
   0% {
     transform: translateX(-1000px);
     opacity: 0;
+    display: none;
   }
   30% {
     transform: translateX(-800px);
@@ -173,18 +222,8 @@ body {
 .navbar-default {
   background: none;
   border: none;
-  -moz-animation-name: dropnav;
-  -moz-animation-iteration-count: 1;
-  -moz-animation-timing-function: ease-in;
-  -moz-animation-duration: 1s;
-  -webkit-animation-name: dropnav;
-  -webkit-animation-iteration-count: 1;
-  -webkit-animation-timing-function: ease-in;
-  -webkit-animation-duration: 1s;
-  animation-name: dropnav;
-  animation-iteration-count: 1;
-  animation-timing-function: ease-in;
-  animation-duration: 1s;
+  -webkit-animation: dropnav 1500ms ease-in 100ms 1;
+  animation: dropnav 1500ms ease-in 100ms 1;
 }
 .navbar-default .navbar-nav li a {
   color: #fff;
@@ -195,156 +234,13 @@ body {
 .navbar-default .navbar-nav li a:focus {
   color: #C6EB21;
   -webkit-animation: move-y 500ms;
-  -moz-animation: move-y 500ms;
-  -o-animation: move-y 500ms;
-}
-.login {
-  margin-top: 20px;
-  -moz-animation-name: dropHeader;
-  -moz-animation-iteration-count: 1;
-  -moz-animation-timing-function: ease-in;
-  -moz-animation-duration: 1s;
-  -webkit-animation-name: dropHeader;
-  -webkit-animation-iteration-count: 1;
-  -webkit-animation-timing-function: ease-in;
-  -webkit-animation-duration: 1s;
-  animation-name: dropHeader;
-  animation-iteration-count: 1;
-  animation-timing-function: ease-in;
-  animation-duration: 1s;
-}
-.login a {
-  color: #fff;
-  font-size: 17px;
-  font-weight: bold;
-  padding-left: 10px;
-}
-.login a:hover {
-  text-decoration: none;
-  color: #C6EB21;
-  -webkit-animation: move-y 500ms;
-  -moz-animation: move-y 500ms;
-  -o-animation: move-y 500ms;
-}
-.homeservice {
-  text-align: center;
-  padding: 20px 0px 50px 0px;
-  -moz-animation-name: dropcontent;
-  -moz-animation-iteration-count: 1;
-  -moz-animation-timing-function: ease-in;
-  -moz-animation-duration: 1000ms;
-  -webkit-animation-name: dropcontent;
-  -webkit-animation-iteration-count: 1;
-  -webkit-animation-timing-function: ease-in;
-  -webkit-animation-duration: 1000ms;
-  animation-name: dropcontent;
-  animation-iteration-count: 1;
-  animation-timing-function: ease-in;
-  animation-duration: 1000ms;
-}
-.service {
-  display: inline-block;
-  overflow: hidden;
-  position: relative;
-  border-radius: 5px;
-  text-align: center;
-  height: 186px;
-  transition: all 300ms linear;
-}
-.service p {
-  text-align: center;
-}
-.service h3 {
-  color: #fff;
-  height: 80px;
-  font-weight: bold;
-}
-.service h3:hover {
-  -webkit-animation: smallToBig 300ms ease;
-}
-.service .description {
-  position: absolute;
-  height: 80px;
-  width: 170px;
-  left: 50%;
-  margin-left: -85px;
-  top: 60px;
-  opacity: 0;
-  transition: all 400ms linear;
-  font-size: 10px;
-}
-.service .description a {
-  color: #000;
-  margin-top: 10px;
-}
-.service:hover {
-  z-index: 200;
-  transform: scale(1.29);
-  border: 5px solid #fff;
-}
-.service:hover .heading {
-  display: none;
-  opacity: 0;
-}
-.service:hover .description {
-  opacity: 1.9;
-}
-@media (max-width: 384px) {
-  .service {
-    width: 100%;
-  }
-}
-@media (min-width: 385px) and (max-width: 768px) {
-  .service {
-    width: 190px;
-  }
-}
-@media (min-width: 768px) {
-  .service {
-    width: 186px;
-  }
-}
-.service1 {
-  background-color: #00B586;
-}
-.service2 {
-  background-color: #04E0FC;
-}
-.service3 {
-  background-color: #FDDE05;
-}
-.service4 {
-  background-color: #FA10A0;
-}
-.service5 {
-  background-color: #FF5541;
-}
-@-moz-keyframes dropcontent {
-  0% {
-    -moz-transform: translateY(1000px);
-    opacity: 0;
-  }
-  30% {
-    transform: translateY(800px);
-    opacity: 0;
-  }
-  55% {
-    transform: translateY(600px);
-    opacity: 0;
-  }
-  85% {
-    transform: translateY(200px);
-    opacity: 0;
-  }
-  100% {
-    -moz-transform: translateY(0);
-    opacity: 1;
-  }
+  animation: move-y 500ms;
 }
 @-webkit-keyframes dropcontent {
   0% {
     -webkit-transform: translateY(1000px);
     opacity: 0;
+    display: none;
   }
   30% {
     transform: translateY(800px);
@@ -367,6 +263,7 @@ body {
   0% {
     transform: translateY(1000px);
     opacity: 0;
+    display: none;
   }
   30% {
     transform: translateY(800px);
@@ -385,6 +282,95 @@ body {
     opacity: 1;
   }
 }
+.homeservice {
+  text-align: center;
+  padding: 20px 0px 50px 0px;
+}
+.homeservice .service {
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+  border-radius: 5px;
+  height: 186px;
+  transition: all 300ms linear;
+}
+@media (min-width: 320px) {
+  .homeservice .service {
+    width: 100%;
+  }
+}
+@media (min-width: 992px) {
+  .homeservice .service {
+    width: 150px;
+  }
+}
+@media (min-width: 1200px) {
+  .homeservice .service {
+    width: 186px;
+  }
+}
+.homeservice .service .heading,
+.homeservice .service h3 {
+  color: #fff;
+}
+.homeservice .service h3 {
+  height: 80px;
+  font-weight: bold;
+}
+.homeservice .service h3:hover {
+  -webkit-animation: smallToBig 300ms ease;
+}
+.homeservice .service .description {
+  height: 70px;
+  width: 170px;
+  top: 60px;
+  position: absolute;
+  left: 50%;
+  margin-left: -85px;
+}
+.homeservice .service .description,
+.homeservice .service .read {
+  opacity: 0;
+  transition: all 400ms linear;
+  font-size: 10px;
+  color: #fff;
+}
+.homeservice .service .read {
+  margin-top: 10px;
+}
+.homeservice .service:hover {
+  z-index: 200;
+  transform: scale(1.29);
+  border: 5px solid #fff;
+}
+.homeservice .service:hover .heading {
+  display: none;
+  opacity: 0;
+}
+.homeservice .service:hover .description,
+.homeservice .service:hover .read {
+  opacity: 1.9;
+}
+.homeservice .service1 {
+  background-color: #0E9E04;
+}
+.homeservice .service2 {
+  background-color: #366FC5;
+}
+.homeservice .service3 {
+  background-color: #CD7F32;
+}
+.homeservice .service4 {
+  background-color: #FA10A0;
+}
+.homeservice .service5 {
+  background-color: #BA0419;
+}
+.homeservice,
+.content {
+  -webkit-animation: dropcontent 2500ms ease-in 200ms 1;
+  animation: dropcontent 2500ms ease-in 200ms 1;
+}
 .content {
   background-color: #E9E9E9;
   border: 20px solid #D2A61D;
@@ -393,18 +379,6 @@ body {
   margin-top: 10px;
   position: relative;
   height: 500px;
-  -moz-animation-name: dropcontent;
-  -moz-animation-iteration-count: 1;
-  -moz-animation-timing-function: ease-in;
-  -moz-animation-duration: 1000ms;
-  -webkit-animation-name: dropcontent;
-  -webkit-animation-iteration-count: 1;
-  -webkit-animation-timing-function: ease-in;
-  -webkit-animation-duration: 1000ms;
-  animation-name: dropcontent;
-  animation-iteration-count: 1;
-  animation-timing-function: ease-in;
-  animation-duration: 1000ms;
 }
 .content .info {
   padding: 10px 20px;
@@ -453,31 +427,11 @@ h4,
 h2 {
   color: #C50606;
 }
-/* Chrome, Safari, Opera */
-@-webkit-keyframes mymove {
-  from {
-    top: 0px;
-  }
-  to {
-    top: 200px;
-  }
-}
-@keyframes mymove {
-  from {
-    top: 0px;
-  }
-  to {
-    top: 200px;
-  }
-}
 h2 {
   margin-top: 0px;
   margin-bottom: 0px;
   background-color: #DDD8D8;
   padding: 20px;
-  -webkit-animation: mymove 5s infinite;
-  /* Chrome, Safari, Opera */
-  animation: mymove 5s infinite;
 }
 .btn-info,
 .btn-link {
@@ -500,11 +454,32 @@ ul {
 .addrs {
   position: absolute;
   z-index: 99;
-  border-radius: 130px;
+  border-radius: 140px;
   border: 5px solid #ccc;
   margin-top: 50px;
   background-color: #fff;
   margin-left: 10px;
+  padding: 10px 40px;
+  transition: all 300ms linear;
+}
+.addrs h4 {
+  transition: all 300ms linear;
+}
+.addrs:hover {
+  background-color: #e1f0fa;
+  border: 5px solid #385F79;
+}
+.addrs:hover h4 {
+  opacity: 1;
+  color: #2676ac;
+  -webkit-animation: moveFromTop 300ms ease-in-out;
+}
+.contact {
+  position: absolute;
+  z-index: 99;
+  right: 1px;
+  height: 86%;
+  overflow: auto;
 }
 @-webkit-keyframes moveFromTop {
   from {
@@ -532,16 +507,37 @@ ul {
   background-color: #DDD8D8;
   transition: all 300ms linear;
 }
-.apnasite .heading {
+.apnasite .heading,
+.apnasite .description {
   transition: all 300ms linear;
 }
-.apnasite :hover .heading {
+.apnasite:hover {
+  background-color: #4E0660;
+}
+.apnasite:hover .heading {
   opacity: 1;
-  color: #2676ac;
+  color: #fff;
+  font-size: 25px;
   -webkit-animation: moveFromTop 300ms ease-in-out;
 }
-.apnalogo {
-  max-width: 250px;
+.apnasite:hover .description {
+  opacity: 1;
+  color: #fff;
+}
+@media (min-width: 320px) {
+  .apnalogo {
+    width: 100%;
+  }
+}
+@media (min-width: 992px) {
+  .apnalogo {
+    width: 180px;
+  }
+}
+@media (min-width: 1200px) {
+  .apnalogo {
+    width: 250px;
+  }
 }
 @keyframes myfirst {
   0% {
@@ -550,7 +546,7 @@ ul {
     top: 0px;
   }
   25% {
-    color: violet;
+    color: purple;
     left: 0px;
     top: 0px;
   }
@@ -578,6 +574,7 @@ ul {
 .packages .thumbnail p {
   animation: myfirst 5s infinite;
   animation-direction: initial;
+  text-align: center;
 }
 .packages .thumbnail h3 {
   display: block;
