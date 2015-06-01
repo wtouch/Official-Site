@@ -6,6 +6,22 @@
 			-moz-transform: translateY(-200px);
 			opacity : 0;
 		}
+		20% {
+			-moz-transform: translateY(-80px);
+			opacity : 0;
+		}
+		40% {
+			-moz-transform: translateY(-50px);
+			opacity : 0;
+		}
+		60% {
+			-moz-transform: translateY(-30px);
+			opacity : 0;
+		}
+		80% {
+			-moz-transform: translateY(-10px);
+			opacity : 0;
+		}
 		100% {
 			-moz-transform: translateY(0);
 			opacity :1;
@@ -16,6 +32,22 @@
 			-webkit-transform: translateY(-200px);
 			opacity : 0;
 		}
+		20% {
+			-moz-transform: translateY(-80px);
+			opacity : 0;
+		}
+		40% {
+			-moz-transform: translateY(-50px);
+			opacity : 0;
+		}
+		60% {
+			-moz-transform: translateY(-30px);
+			opacity : 0;
+		}
+		80% {
+			-moz-transform: translateY(-10px);
+			opacity : 0;
+		}
 		100% {
 			-webkit-transform: translateY(0);
 			opacity : 1;
@@ -24,6 +56,22 @@
 	@keyframes dropHeader {
 		0% {
 			transform: translateY(-200px);
+			opacity : 0;
+		}
+		20% {
+			-moz-transform: translateY(-80px);
+			opacity : 0;
+		}
+		40% {
+			-moz-transform: translateY(-50px);
+			opacity : 0;
+		}
+		60% {
+			-moz-transform: translateY(-30px);
+			opacity : 0;
+		}
+		80% {
+			-moz-transform: translateY(-10px);
 			opacity : 0;
 		}
 		100% {
@@ -99,50 +147,6 @@
 			padding-bottom: 9px;
 		}
 	}
-	@-moz-keyframes dropcontent {
-		0% {
-			-moz-transform: translateY(1000px);
-			opacity : 0;
-		}
-		30%{
-			transform: translateY(800px);
-			opacity : 0;
-		}
-		55%{
-			transform: translateY(600px);
-			opacity : 0;
-		}
-		85%{
-			transform: translateY(200px);
-			opacity : 0;
-		}
-		100% {
-			-moz-transform: translateY(0);
-			opacity :1;
-		}
-	}
-	@-webkit-keyframes dropcontent {
-		0% {
-			-webkit-transform: translateY(1000px);
-			opacity : 0;
-		}
-		30%{
-			transform: translateY(800px);
-			opacity : 0;
-		}
-		55%{
-			transform: translateY(600px);
-			opacity : 0;
-		}
-		85%{
-			transform: translateY(200px);
-			opacity : 0;
-		}
-		100% {
-			-webkit-transform: translateY(0);
-			opacity :1;
-		}
-	}
 	@keyframes dropnav {
 		0% {
 			transform: translateX(-1000px);
@@ -165,23 +169,26 @@
 			opacity :1;
 		}
 	}
+	.navbar{
+		margin-top : 20px;
+	}
 	.navbar-default{
 		background: none;
 		border :none;
 		-moz-animation-name: dropnav;
 		-moz-animation-iteration-count: 1;
 		-moz-animation-timing-function: ease-in;
-		-moz-animation-duration: 2s;
+		-moz-animation-duration: 1s;
 
 		-webkit-animation-name: dropnav;
 		-webkit-animation-iteration-count: 1;
 		-webkit-animation-timing-function: ease-in;
-		-webkit-animation-duration: 2s;
+		-webkit-animation-duration: 1s;
 
 		animation-name: dropnav;
 		animation-iteration-count: 1;
 		animation-timing-function: ease-in;
-		animation-duration: 2s;
+		animation-duration: 1s;
 		.navbar-nav{
 			li{
 				a{
@@ -229,10 +236,22 @@
 		}
 	}
 	.homeservice{
-		margin-top : 20px;
 		text-align: center;
-		padding-top: 60px;
-		height : 320px;
+		padding: 20px 0px 50px 0px;
+		-moz-animation-name: dropcontent;
+		-moz-animation-iteration-count: 1;
+		-moz-animation-timing-function: ease-in;
+		-moz-animation-duration: 1000ms;
+
+		-webkit-animation-name: dropcontent;
+		-webkit-animation-iteration-count: 1;
+		-webkit-animation-timing-function: ease-in;
+		-webkit-animation-duration: 1000ms;
+
+		animation-name: dropcontent;
+		animation-iteration-count: 1;
+		animation-timing-function: ease-in;
+		animation-duration: 1000ms;
 	}
 	.service{
 		display: inline-block;
@@ -242,6 +261,9 @@
 		text-align: center;
 		height: 186px;
 		transition: all 300ms linear;
+		p{
+			text-align : center;
+		}
 		h3{
 			color : #fff;
 			height : 80px;
@@ -259,6 +281,11 @@
 			top: 60px;
 			opacity :0;
 			transition: all 400ms linear;
+			font-size : 10px;
+			a{
+				color :#000;
+				margin-top : 10px;
+			}
 		} 
 	}
 	.service:hover{
@@ -270,7 +297,7 @@
 			opacity :0;
 		}
 		.description {
-			opacity: 0.8;
+			opacity: 1.9;
 		}
 	}
 	@media (max-width: 384px){ 
@@ -380,23 +407,23 @@
 		-moz-animation-name: dropcontent;
 		-moz-animation-iteration-count: 1;
 		-moz-animation-timing-function: ease-in;
-		-moz-animation-duration: 2s;
+		-moz-animation-duration: 1000ms;
 
 		-webkit-animation-name: dropcontent;
 		-webkit-animation-iteration-count: 1;
 		-webkit-animation-timing-function: ease-in;
-		-webkit-animation-duration: 2s;
+		-webkit-animation-duration: 1000ms;
 
 		animation-name: dropcontent;
 		animation-iteration-count: 1;
 		animation-timing-function: ease-in;
-		animation-duration: 2s;
+		animation-duration: 1000ms;
 		.info{
 			padding : 10px 20px;
 			height : 370px;
 			overflow : auto;
-			h4{
-				color : #15AFDB;
+			p{
+				text-align:justify;
 			}
 		}
 		.port{
@@ -430,44 +457,34 @@
 		.carousel-inner{
 			height: 300px;
 		}
+		.media-left{
+			img{
+				height: 150px;
+				max-width: 200px;
+			}
+		}
 	}
-	
-	@keyframes fadein {
-		from { opacity: 0; }
-		to   { opacity: 1; }
+	h4,h2{
+		color: #C50606;
 	}
-
-	/* Firefox < 16 */
-	@-moz-keyframes fadein {
-		from { opacity: 0; }
-		to   { opacity: 1; }
-	}
-
-	/* Safari, Chrome and Opera > 12.1 */
-	@-webkit-keyframes fadein {
-		from { opacity: 0; }
-		to   { opacity: 1; }
+	/* Chrome, Safari, Opera */
+	@-webkit-keyframes mymove {
+		from {top: 0px;}
+		to {top: 200px;}
 	}
 
-	/* Internet Explorer */
-	@-ms-keyframes fadein {
-		from { opacity: 0; }
-		to   { opacity: 1; }
-	}
-
-	/* Opera < 12.1 */
-	@-o-keyframes fadein {
-		from { opacity: 0; }
-		to   { opacity: 1; }
+	@keyframes mymove {
+		from {top: 0px;}
+		to {top: 200px;}
 	}
 	h2{
 		margin-top: 0px;
 		margin-bottom: 0px;
-		color: #C50606;
-		background-color: #DDD7D7;
+		background-color: #DDD8D8;
 		padding: 20px;
+		-webkit-animation: mymove 5s infinite; /* Chrome, Safari, Opera */
+		animation: mymove 5s infinite;
 	}
-	
 	.btn-info, .btn-link {
 		color: #fff;
 		background-color: #323232;
@@ -475,52 +492,6 @@
 		margin-top: 18px;
 		border-radius: 15px;
 		padding: 5px 25px;
-		
-	}
-	@-webkit-keyframes spin {
-		0%{
-			-webkit-transform: rotate(0deg);
-			-webkit-animation-timing-function: ease-out;
-		}
-		30% {
-			-webkit-transform: rotate(160deg);
-			-webkit-animation-timing-function: ease-out;
-		}
-		60% {
-			-webkit-transform: rotate(340deg);
-			-webkit-animation-timing-function: ease-out;
-		}
-		85% {
-			-webkit-transform: rotate(400deg);
-			-webkit-animation-timing-function: ease-out;
-		}
-		94% {
-			-webkit-transform: rotate(340deg);
-			-webkit-animation-timing-function: ease-out;
-		}
-		96% {
-			-webkit-transform: rotate(370deg);
-			-webkit-animation-timing-function: ease-out;
-		}
-		98% {
-			-webkit-transform: rotate(353deg);
-			-webkit-animation-timing-function: ease-out;
-		}
-		100% {
-			-webkit-transform: rotate(360deg);
-			-webkit-animation-timing-function: ease-out;
-		}
-	}
-	.btn-info:hover{
-		-webkit-animation: spin 4s;
-		-moz-animation: spin 4s;
-		-o-animation: spin 4s;
-	}
-	.media-left{
-		img{
-			height: 150px;
-			max-width: 200px;
-		}
 	}
 	ul{
 		padding-left : 15px;
@@ -540,63 +511,104 @@
 		background-color:#fff;
 		margin-left : 10px;
 	}
+	@-webkit-keyframes moveFromTop {
+		from {
+			opacity: 0;
+			-webkit-transform: translateY(-200%);
+		}
+		to {
+			opacity: 1;
+			-webkit-transform: translateY(0%);
+		}
+	}
+	@keyframes moveFromTop {
+		from {
+			opacity: 0;
+			-webkit-transform: translateY(-200%);
+		}
+		to {
+			opacity: 1;
+			-webkit-transform: translateY(0%);
+		}
+	}
+	.apnasite{
+		padding:10px; 
+		margin-bottom : 10px;
+		background-color : #DDD8D8;
+		transition: all 300ms linear;
+		.heading{
+			transition:all 300ms linear;
+		}
+	}
+	.apnasite :hover {
+		//background-color : #fff;
+		.heading{
+			opacity: 1;
+			color: #2676ac;
+			-webkit-animation: moveFromTop 300ms ease-in-out;
+		}
+	}
+	.apnalogo{
+		max-width : 250px;
+	}
+	@keyframes myfirst {
+		0%   {color: black; left:-100px; top: 0px;}
+		25%  {color: violet; left: 0px; top: 0px;}
+		50%  {color: blue; left: 50px; top: 0px;}
+		75%  {color: green; left: 100px; top: 0px;}
+		100% {color: red; left: 200px; top: 0px;}
+	}
 	.packages .thumbnail{
 		height: 720px;
+		background-color: #D5D5D5;
+		border : 10px solid #8B8A89;
+		p{
+			animation: myfirst 5s infinite;
+			animation-direction: initial;
+		}
+		h3 {
+			display: block;
+			width: 250px;
+			margin: 0;
+			padding: 5px 10px;
+			position: relative;
+			left: -20px;
+			top: 8px;
+			color: #FFFDFD;
+			text-shadow: 0 1px 1px #111;
+			border-top: 1px solid #363636;
+			border-bottom: 1px solid #202020;
+			background: linear-gradient(top, #383838 0%, #262626 100%);
+			border-radius: 2px 2px 0 0;
+			box-shadow: 0 1px 2px rgba(0,0,0,0.3);
+		}
+		h3::before,h3::after {
+			content: '';
+			display: block;
+			width: 0;
+			height: 0;
+			position: absolute;
+			bottom: -11px;
+			border: 5px solid;
+			border-color: #242424 transparent transparent transparent;    
+		}
+		h3::before {left: 0;}
+		h3::after {right: 0;}
 	}
-	.thumbnail .caption,h3{
-		color : #fff;
+	.thumbnail.bronz h3{
+		background-color : #CD7F32;
 	}
-	.thumbnail h3 {
-		display: block;
-		height: 40px;
-		line-height: 1.3;
-		width: 250px;
-		margin: 0;
-		padding: 5px 10px;
-		position: relative;
-		left: -16px;
-		top: 8px;
-		color: #FFFDFD;
-		text-shadow: 0 1px 1px #111;
-		border-top: 1px solid #363636;
-		border-bottom: 1px solid #202020;
-		background: #843ADE;
-		background: linear-gradient(top, #383838 0%, #262626 100%);
-		border-radius: 2px 2px 0 0;
-		box-shadow: 0 1px 2px rgba(0,0,0,0.3);
-	}
-	.thumbnail h3::before,
-	.thumbnail h3::after {
-		content: '';
-		display: block;
-		width: 0;
-		height: 0;
-		position: absolute;
-		bottom: -11px;
-		z-index: -10;
-		border: 5px solid;
-		border-color: #242424 transparent transparent transparent;    
-	}
-	.thumbnail h3::before {left: 0;}
-	.thumbnail h3::after {right: 0;}
-	.thumbnail.bronz {
-		background-color: #CD7F32;
-		border : 10px solid #C26E1B;
-	}
-	.thumbnail.silver {
+	.thumbnail.silver h3{
 		background-color: #366FC5;
-		border : 10px solid #315DA0;
 	}
-	.thumbnail.gold {
-		background-color: #ffd700;
-		border : 10px solid #F4CF09;
+	.thumbnail.gold h3{
+		background-color: #E5A707;
 	}
-	.thumbnail.diamond {
-		background-color: #D03255;
-		border : 10px solid #C31F43;
+	.thumbnail.diamond h3{
+		background-color: #BA0419;
 	}
 	footer{
-		margin : 25px 0px;
+		margin : 15px 0px;
 		text-align : center;
 		padding : 8px;
 		color : #fff;

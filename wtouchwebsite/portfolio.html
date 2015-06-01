@@ -14,9 +14,21 @@
 		<script src="js/script.js"></script>
 		<meta name="description" content="">
 		<meta name="keywords" content="">
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$('.item').click(function(){
+					var srcimg = $(this).attr('src');
+					$(".portimg").attr('src',srcimg);
+				});
+			});
+		</script>
 	</head>
 	<body>
 		<div class="container">
+			<div class="pull-right login">
+				<a href="http://manage.wtouch.in/">Customer Login</a>
+				<a href="http://email.wtouch.in/">Email Login</a>
+			</div>
 			<div class="logo text-center">
 				<a href="#"><img src="img/getImage.png" class="logoimg"></a>
 			</div>
@@ -48,7 +60,7 @@
 					<div class="row">
 						<div class="col-sm-8 col-md-8"> 
 							<div id="img" class="port">
-								<img src="" class="portimg">
+								<img src="img/atharwa-gems.jpg" class="portimg">
 							</div>
 						</div>
 						<div class="col-sm-4 col-md-4">
