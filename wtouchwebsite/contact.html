@@ -10,7 +10,6 @@
 		<script src="js/jquery.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
 		<script src="js/angular.min.js"></script>
-		<script src="js/angular-route.min.js"></script>
 		<script src="js/script.js"></script>
 		<meta name="description" content="">
 		<meta name="keywords" content="">
@@ -35,21 +34,21 @@
 	<body>
 		<div class="container">
 			<div class="pull-right login">
-				<a href="http://manage.wtouch.in/">Customer Login</a>
-				<a href="http://email.wtouch.in/">Email Login</a>
+				<a href="http://manage.wtouch.in/" target="_blank">Customer Login</a>
+				<a href="http://email.wtouch.in/" target="_blank">Email Login</a>
 			</div>
 			<div class="logo text-center">
 				<a href="#"><img src="img/getImage.png" class="logoimg"></a>
 			</div>
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+			</div>
 			<nav class="navbar navbar-default">
-				<div class="navbar-header">
-					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-						<span class="sr-only">Toggle navigation</span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-				</div>
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav">
 						<li><a href="index.html" class="links">HOME</a></li>
@@ -63,7 +62,7 @@
 					</ul>
 				</div>
 			</nav>
-			<div class="content" id="contact">
+			<div class="content" id="contact" ng-app="myApp">
 				<h2 class="text-center">CONTACT US</h2>
 				<div id="googleMap"></div>
 				<div class="addrs text-center">
@@ -80,67 +79,62 @@
 					<p>Mobile : 9049508514
 				</div>
 				<div class="contact">
-					<div class="panel panel-default">
-						<div class="panel-body">
-							<h4 class="text-center">Enquiry Form</h4>
-							<form class="form-horizontal form-border" role="form" name="enquiryForm" ng-submit="enquiryForm.$valid" ng-controller="enquiryController" novalidate>
-								<div class="form-group">
-									<div class="col-sm-12">
-										<input type="hidden" class="form-control" id="user_id" ng-init="enquiry.user_id={{data.user_id}}" ng-model="enquiry.user_id" name="user_id">
-										
-										<input type="hidden" class="form-control" id="date" ng-model="enquiry.date" name="date">
-										
-										<input type="hidden" class="form-control" id="to_email.to" name="to_email.to" ng-model="enquiry.to_email.to" ng-init="enquiry.to_email.to='{{data.owner_email}}'">
-										
-										<input type="hidden" class="form-control" id="to_email.cc" name="to_email.cc" ng-model="enquiry.to_email.cc" ng-init="enquiry.to_email.cc='vilas@wtouch.in'">
+					<h4 class="text-center">Enquiry Form</h4>
+					<form class="form-horizontal form-border" role="form" name="enquiryForm" ng-submit="enquiryForm.$valid" ng-controller="enquiryController" novalidate>
+						<div class="form-group">
+							<div class="col-sm-12">
+								<input type="hidden" class="form-control" id="user_id" name="user_id" ng-init="enquiry.user_id=4" ng-model="enquiry.user_id" >
 								
-										<input type="hidden" class="form-control" id="subject" name="subject" ng-model="enquiry.subject">
-										
-										<input type="text" class="form-control" id="name" ng-model="enquiry.name" name="name" placeholder="Name" ng-required="true">	
-											<span class="text-danger" ng-show="enquiryForm.name.$error.required && (enquiryForm.name.$dirty || submitted)" class="help-block">Name is required.</span>
-									</div>	
-								</div>
-								<div class="form-group">
-									<div class="col-sm-12">
-										<input type="email" class="form-control" id="from" name="from" placeholder="E-mail" ng-model="enquiry.from_email.from" required>
-										<span  ng-show="enquiryForm.from.$dirty && enquiryForm.from.$invalid">
-											<span class="text-danger" ng-show="enquiryForm.from.$error.required">From is required.</span>
-											<span class="text-danger" ng-show="enquiryForm.from.$error.email">Invalid Email address.</span>
-										</span>
-									</div>
-								</div>
-								<div class="form-group">
-									<div class="col-sm-12">
-										<input type="text" class="form-control help-block" id="phone" ng-model="enquiry.message.phone" name="phone" placeholder="Contact Number"  ng-pattern="/^[789]\d{9}$/" maxlength="10" required>
-										<p ng-show="enquiryForm.phone.$error.pattern && (enquiryForm.phone.$dirty || submitted)" class="text-danger" >Enter a valid contact no.</p>
-									</div>						
-								</div>	
-								<div class="form-group">
-									<div class="col-sm-12">
-										<textarea id="address" name="address" class="form-control" placeholder="Address" rows="3" ng-model="enquiry.message.address" ng-minlength="2" ng-maxlength="356" required>
-										</textarea>
-									</div>
-								</div>
-								<div class="form-group">
-									<div class="col-sm-12">
-										<textarea id="message" name="message" class="form-control" placeholder="Message" rows="3" ng-model="enquiry.message.message" ng-minlength="2" ng-maxlength="356" required>
-										</textarea>
-									</div>
-								</div>
-								<div class="form-group col-sm-12">
-									<button type="submit" class="btn btn-link" ng-click="postData(enquiry)" ng-disabled="enquiryForm.$pristine || enquiryForm.$invalid || mailSent">Send</button>
-									<button type="reset" class="btn btn-link" title="Cancel Sending">Clear</button>
-								</div>
-							</form>
+								<input type="hidden" class="form-control" id="date" ng-model="enquiry.date" name="date">
+								
+								<input type="hidden" class="form-control" id="to_email.to" name="to_email.to" ng-model="enquiry.to_email.to" ng-init="enquiry.to_email.to='aarti@wtouch.in'">
+								
+								<input type="hidden" class="form-control" id="to_email.cc" name="to_email.cc" ng-model="enquiry.to_email.cc" ng-init="enquiry.to_email.cc='vilas@wtouch.in'">
+						
+								<input type="hidden" class="form-control" id="subject" name="subject" ng-model="enquiry.subject">
+							</div>	
 						</div>
-					</div>
+						<div class="form-group">
+							<div class="col-sm-6">
+								<input type="text" class="form-control" id="name" ng-model="enquiry.name" name="name" placeholder="Name" ng-required="true">	
+								<span class="text-danger" ng-show="enquiryForm.name.$error.required && (enquiryForm.name.$dirty || submitted)" class="help-block">Name is required.</span>
+							</div>
+							<div class="col-sm-6">
+								<input type="text" class="form-control" id="phone" ng-model="enquiry.message.phone" name="phone" placeholder="Contact Number"  ng-pattern="/^[789]\d{9}$/" maxlength="10" required>
+								<span ng-show="enquiryForm.phone.$error.pattern && (enquiryForm.phone.$dirty || submitted)" class="text-danger" >Enter a valid contact no.</span>
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="col-sm-12">
+								<input type="email" class="form-control" id="from" name="from" placeholder="E-mail" ng-model="enquiry.from_email.from" required>
+								<span  ng-show="enquiryForm.from.$dirty && enquiryForm.from.$invalid">
+									<span class="text-danger" ng-show="enquiryForm.from.$error.required">From is required.</span>
+									<span class="text-danger" ng-show="enquiryForm.from.$error.email">Invalid Email address.</span>
+								</span>
+							</div>						
+						</div>	
+						<div class="form-group">
+							<div class="col-sm-12">
+								<textarea required id="address" name="address" class="form-control" placeholder="Address" rows="3" ng-model="enquiry.message.address" ng-minlength="2" ng-maxlength="200"></textarea>
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="col-sm-12">
+								<textarea id="message" name="message" class="form-control" placeholder="Message" rows="3" ng-model="enquiry.message.message" ng-minlength="2" ng-maxlength="356" required></textarea>
+							</div>
+						</div>
+						<div class="form-group col-sm-12 text-center">
+							<button type="submit" class="btn btn-link" ng-click="postData(enquiry)" ng-disabled="enquiryForm.$pristine || enquiryForm.$invalid || mailSent">Send</button>
+							<button type="reset" class="btn btn-link" title="Cancel Sending">Clear</button>
+						</div>
+					</form>
 					<div ng-show="mailSent" class="text-center">
 						Your enquiry sent successfully.
 					</div>
 				</div>
 			</div>
 			<footer>
-				<p>copyright&copy;2012 <a href="http://wtouch.in" target="_blank">Web Touch India Solutions</a></p>
+				<p>Copyright &copy; 2012 <a href="http://www.wtouch.in" target="_blank">Web Touch India Solutions</a></p>
 			</footer>
 		</div>
 	</body>

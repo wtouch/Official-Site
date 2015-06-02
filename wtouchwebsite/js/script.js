@@ -1,16 +1,21 @@
 'use strict';
 var hostUrl = '/website/templates/default/';
 
-var app = angular.module('myApp', ['ngRoute']);
+$(document).ready(function() {
+	$(".imgs").click(function(){
+		$(".portimg").attr("src",($(this).attr("src")))
+	})
+});
+var app = angular.module('myApp',[]);
 
-app.config(function($routeProvider, $locationProvider) {
+app.config(function($locationProvider) {
   /* $routeProvider
    .when('/:view', {
     templateUrl: function(rd) { return hostUrl+"/"+rd.view+'.html';}
   })
   .otherwise({ redirectTo: '/home' }); */
 });
-app.controller('enquiryController', function($scope,$http, $route, $location) {
+app.controller('enquiryController', function($scope,$http, $location) {
 	$scope.hostUrl = hostUrl;
 	var today = new Date();
 	var year = today.getFullYear();
@@ -25,16 +30,11 @@ app.controller('enquiryController', function($scope,$http, $route, $location) {
 			date : year + "-" + month + "-" + date + " " + hour + ":" + min + ":"+sec
 		};
 		$scope.postData = function(enquiry){
-			$http.post("/server-api/index.php/post/enquiry", $scope.enquiry).success(function(response) {
+			console.log(enquiry);
+			$http.post("http://apnasite.in/server-api/index.php/post/enquiry", $scope.enquiry).success(function(response) {
+				
 				$scope.mailSent = true;
 			});
 		};
 });	
-	app.controller('aboutController', function($scope,$http, $route, $location) {
-		var s = $location.path();
-		$scope.url = s.substr(1);
-		$scope.makeActive = function(url){
-			$scope.id = url;
-		}
-		$scope.makeActive($scope.url);
-	});
+	

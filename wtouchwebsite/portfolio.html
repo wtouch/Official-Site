@@ -10,37 +10,32 @@
 		<script src="js/jquery.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
 		<script src="js/angular.min.js"></script>
-		<script src="js/angular-route.min.js"></script>
+		
 		<script src="js/script.js"></script>
 		<meta name="description" content="">
 		<meta name="keywords" content="">
 		<script type="text/javascript">
-			$(document).ready(function() {
-				$('.item').click(function(){
-					var srcimg = $(this).attr('src');
-					$(".portimg").attr('src',srcimg);
-				});
-			});
+			
 		</script>
 	</head>
 	<body>
 		<div class="container">
 			<div class="pull-right login">
-				<a href="http://manage.wtouch.in/">Customer Login</a>
-				<a href="http://email.wtouch.in/">Email Login</a>
+				<a href="http://manage.wtouch.in/" target="_blank">Customer Login</a>
+				<a href="http://email.wtouch.in/" target="_blank">Email Login</a>
 			</div>
 			<div class="logo text-center">
 				<a href="#"><img src="img/getImage.png" class="logoimg"></a>
 			</div>
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+			</div>
 			<nav class="navbar navbar-default">
-				<div class="navbar-header">
-					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-						<span class="sr-only">Toggle navigation</span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-				</div>
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav">
 						<li><a href="index.html" class="links">HOME</a></li>
@@ -72,14 +67,20 @@
 										<div class="portfolio"><img alt="" class="imgs" id="img2" src="img/gita-ka-bhagwan.jpg"></div>
 										<div class="portfolio"><img alt="" class="imgs" id="img3" src="img/jaidev-landmarks.jpg"></div>
 										<div class="portfolio"><img alt="" class="imgs" id="img4" src="img/property-demand.jpg"></div>
+										<div class="portfolio"><img alt="" class="imgs" id="img5" src="img/shree-travels.jpg"></div>
+										<div class="portfolio"><img alt="" class="imgs" id="img6" src="img/zeprehabcenter.jpg"></div>
 									</div>
 									<div class="item">
+										<div class="portfolio"><img alt="" class="imgs" id="img1" src="img/atharwa-gems.jpg"></div>
+										<div class="portfolio"><img alt="" class="imgs" id="img2" src="img/gita-ka-bhagwan.jpg"></div>
+										<div class="portfolio"><img alt="" class="imgs" id="img3" src="img/jaidev-landmarks.jpg"></div>
+										<div class="portfolio"><img alt="" class="imgs" id="img4" src="img/property-demand.jpg"></div>
 										<div class="portfolio"><img alt="" class="imgs" id="img5" src="img/shree-travels.jpg"></div>
 										<div class="portfolio"><img alt="" class="imgs" id="img6" src="img/zeprehabcenter.jpg"></div>
 									</div>
 								</div>
 								<!-- Controls -->
-								<a class="btn btn-info" href="#carousel-example-generic" data-slide="prev">Previous</a>
+								<a class="btn btn-info" href="#carousel-example-generic" data-slide="prev">Prev</a>
 								<a class="btn btn-info pull-right" href="#carousel-example-generic" role="button" data-slide="next">Next</a>
 							</div>
 						</div>
@@ -87,7 +88,7 @@
 				</div>
 			</div>
 			<footer>
-				<p>copyright&copy;2012 <a href="http://wtouch.in" target="_blank">Web Touch India Solutions</a></p>
+				<p>Copyright &copy; 2012 <a href="http://www.wtouch.in" target="_blank">Web Touch India Solutions</a></p>
 			</footer>
 		</div>
 	</body>
