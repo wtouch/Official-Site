@@ -1,29 +1,20 @@
+@font-face {
+	font-family: 'eurof35';
+	src: url('../fonts/eurof35.eot');
+	src: local('eurof35'), url('../fonts/eurof35.woff') format('woff'), url('../fonts/eurof35.ttf') format('truetype');
+}
+/* use this class to attach this font to any element i.e. <p class="fontsforweb_fontid_469">Text with this font applied</p> */
+
 	body {
-		background-color: #4E0660;
+		background-color: #030936;
 	}
 	@-webkit-keyframes dropHeader {
 		0% {
-			-webkit-transform: translateY(-200px);
-			opacity : 0;
-		}
-		20% {
-			-moz-transform: translateY(-80px);
-			opacity : 0;
-		}
-		40% {
-			-moz-transform: translateY(-50px);
-			opacity : 0;
-		}
-		60% {
-			-moz-transform: translateY(-30px);
-			opacity : 0;
-		}
-		80% {
-			-moz-transform: translateY(-10px);
+			transform: translateY(-200px);
 			opacity : 0;
 		}
 		100% {
-			-webkit-transform: translateY(0);
+			transform: translateY(0);
 			opacity : 1;
 		}
 	}
@@ -32,29 +23,13 @@
 			transform: translateY(-200px);
 			opacity : 0;
 		}
-		20% {
-			-moz-transform: translateY(-80px);
-			opacity : 0;
-		}
-		40% {
-			-moz-transform: translateY(-50px);
-			opacity : 0;
-		}
-		60% {
-			-moz-transform: translateY(-30px);
-			opacity : 0;
-		}
-		80% {
-			-moz-transform: translateY(-10px);
-			opacity : 0;
-		}
 		100% {
 			transform: translateY(0);
 			opacity : 1;
 		}
 	}
 	.logoimg{
-		max-width : 200px;
+		max-width : 285px;
 		@media (min-width: 320px){ 
 			float : left;
 		}
@@ -85,7 +60,7 @@
 	.navbar-toggle .icon-bar {
 		background-color: #888;
 	}
-	.logo, .login{
+	.logo{
 		-webkit-animation: dropHeader 1500ms ease-in-out;
 		-webkit-animation-iteration-count: 1;
 		
@@ -99,58 +74,15 @@
 			font-size: 17px;
 			font-weight: bold;
 			padding-left:10px;
+			text-shadow: 2px 2px 6px #000;
+			transition: all 250ms ease-in;
+			border-bottom: 1px solid transparent;
 		}
 		a:hover{
 			text-decoration :none;
 			color :#C6EB21;
-			-webkit-animation: move-y 500ms;
-			animation: move-y 500ms;
-		}
-	}
-	@-webkit-keyframes move-y {
-		80% {
-			transform:translateY(-30%);
-		}
-		90% {
-			transform:translateY(0%);
-			padding-bottom: 8px;
-		}
-		95% {
-			transform:translateY(-20%);
-		}
-		97% {
-			transform:translateY(0%);
-			padding-bottom: 9px;
-		}
-		99% {
-			transform:translateY(-10%);
-		}
-		100% {
-			transform:translateY(0);
-			padding-bottom: 9px;
-		}
-	}
-	@keyframes move-y {
-		80% {
-			transform:translateY(-30%);
-		}
-		90% {
-			transform:translateY(0%);
-			padding-bottom: 8px;
-		}
-		95% {
-			transform:translateY(-20%);
-		}
-		97% {
-			transform:translateY(0%);
-			padding-bottom: 9px;
-		}
-		99% {
-			transform:translateY(-10%);
-		}
-		100% {
-			transform:translateY(0);
-			padding-bottom: 9px;
+			transform: translateY(-15px);
+			border-bottom: 1px solid;
 		}
 	}
 	@keyframes dropnav {
@@ -176,6 +108,10 @@
 			opacity :1;
 		}
 	}
+	ul.nav.navbar-nav {
+		display: inline-block;
+		float: none;
+	}
 	.navbar{
 		margin-top : 20px;
 	}
@@ -190,17 +126,26 @@
 					color : #fff;
 					font-size: 17px;
 					font-weight: bold;
+					text-shadow: 2px 2px 6px #000;
+					transition: all 250ms ease-in;
+					border-bottom: 1px solid transparent;
 				}
 				a:hover,a:focus{
 					color : #C6EB21;
-					-webkit-animation: move-y 500ms;
-					animation: move-y 500ms;
+					transform: translateY(-15px);
+					border-bottom: 1px solid;
 				}
 			}
+			
+			
 		}
 	}
 	@-webkit-keyframes dropcontent {
 		0% {
+			-webkit-transform:translateY(600px);
+			opacity : 0;
+		}
+		30%{
 			-webkit-transform:translateY(600px);
 			opacity : 0;
 		}
@@ -212,6 +157,10 @@
 	@keyframes dropcontent {
 		0% {
 			transform:translateY(600px);
+			opacity : 0;
+		}
+		30%{
+			-webkit-transform:translateY(600px);
 			opacity : 0;
 		}
 		100% {
@@ -296,9 +245,9 @@
 		}
 	}
 	.homeservice, .content{
-		-webkit-animation: dropcontent 1700ms ease-in;
+		-webkit-animation: dropcontent 2000ms ease-in;
 		-webkit-animation-iteration-count: 1;
-		animation: dropcontent 1700ms ease-in;
+		animation: dropcontent 2000ms ease-in;
 		animation-iteration-count: 1;
 	}
 	#contact{
@@ -306,7 +255,7 @@
 	}
 	.content{
 		background-color : #E9E9E9;
-		border :20px solid #D2A61D;
+		border :20px solid #C8C8C8;
 		border-radius : 5px;
 		box-shadow: 0px 0px 20px 0px #000;
 		margin-top : 10px;
@@ -378,8 +327,8 @@
 	h2{
 		margin-top: 0px;
 		margin-bottom: 0px;
-		background-color: #DDD8D8;
 		padding: 20px;
+		border-bottom: 1px solid rgba(197, 6, 6, 0.11);
 	}
 	ul{
 		padding-left : 15px;
@@ -519,6 +468,7 @@
 		box-shadow: 0px 0px 9px #000;
 		transition: all 300ms linear;
 		.offer{
+			margin-top : 15px;
 			.validity, .price{
 				transition: all 200ms linear;
 				text-align : center;
@@ -527,7 +477,6 @@
 		.offer:hover{
 			.validity, .price{
 				color : purple;
-				font-size : 17px;
 			}
 			.validity{
 				-webkit-animation: moveFromLeft 300ms ease;
@@ -592,6 +541,3 @@
 			color: #C6EB21;
 		}
 	}
-	
-	
-	
