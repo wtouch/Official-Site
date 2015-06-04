@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install PUBLIC "-//Joomla! 2.5//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/2.5/template-install.dtd">
+<extension version="3.1" type="template" client="site">
+	<name>WebTouchOfficial</name>
+	<version>1.0</version>
+	<creationDate>04 June, 2015</creationDate>
+	<author>Vilas Shetkar</author>
+	<authorEmail>admin@wtouch.in</authorEmail>
+	<copyright>Copyright (C) 2015 Web Touch India Solutions, Pune, All rights reserved.</copyright>
+	<description>Web Touch Official Site</description>
+	<files>
+		<filename>favicon.ico</filename>
+		<filename>index.php</filename>
+		<filename>templateDetails.xml</filename>
+		<filename>template_preview.png</filename>
+		<filename>template_thumbnail.png</filename>
+		<folder>css</folder>
+		<folder>fonts</folder>
+		<folder>img</folder>
+		<folder>js</folder>
+		<folder>less</folder>
+	</files>
+	<positions>
+		<position>banner</position>
+		<position>debug</position>
+		<position>breadcrumb</position>
+		<position>position-0</position>
+		<position>position-1</position>
+		<position>position-2</position>
+		<position>position-3</position>
+		<position>position-4</position>
+		<position>position-5</position>
+		<position>footer</position>
+	</positions>
+</extension>
